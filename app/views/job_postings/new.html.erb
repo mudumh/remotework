@@ -1,0 +1,16 @@
+<%= form_for(@job_posting) do |f|%>
+	<%= f.label :job_title %>
+	<%= f.text_field :job_title %>
+
+	<%= f.label :job_desc, "Job description"%>
+	<%= f.text_field :job_desc %>
+
+	<%= f.label :category %>
+	<%= f.text_field :category %>
+
+	<%= f.label :application_instructions,"How to apply" %>
+	<%= f.text_area :application_instructions %>
+
+	<%= f.submit "Post this job" %>
+
+<% end %>

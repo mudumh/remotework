@@ -1,0 +1,12 @@
+<% provide(:title, 'Remote Jobs') %>
+<h1>Job Postings</h1>
+
+<ul>
+	<% @job_postings.each do |job_posting| %>
+		<%=render job_posting%>
+	<% end %>
+</ul>
+
+<%= link_to "Post a Job", newjob_path%>
+
+

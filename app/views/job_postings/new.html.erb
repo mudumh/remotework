@@ -1,16 +1,36 @@
-<%= form_for(@job_posting) do |f|%>
+<div class="container">
+<%= form_for @job_posting do |f|%>
 	<%= f.label :job_title %>
 	<%= f.text_field :job_title %>
 
 	<%= f.label :job_desc, "Job description"%>
 	<%= f.text_field :job_desc %>
 
-	<%= f.label :category %>
-	<%= f.text_field :category %>
+	<%= f.label :category, "Category"%>
+		<%= radio_button_tag(:category, "Programming") %>
+		<%= label_tag(:category, "Programming") %>
+		<%= radio_button_tag(:category, "Design") %>
+		<%= label_tag(:category, "Design") %>
+		<%= f.label :application_instructions,"How to apply" %>
+		<%= f.text_area :application_instructions %>
 
-	<%= f.label :application_instructions,"How to apply" %>
-	<%= f.text_area :application_instructions %>
+	<%= fields_for @company do |fa| %>
+		<%=fa.label :name %>
+    <%=fa.text_field :name %>
+
+    <%=fa.label :url %>
+    <%=fa.text_field :url %>
+
+    <%=fa.label :headquarters %>
+    <%=fa.text_field :headquarters %>
+    
+    <%=fa.label :email %>
+    <%=fa.text_field :email %>
+
+    
+	<% end %>
 
 	<%= f.submit "Post this job" %>
 
 <% end %>
+</div>

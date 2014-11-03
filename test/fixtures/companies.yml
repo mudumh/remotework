@@ -2,12 +2,12 @@
 
 one:
   name: MyString
-  headquarters: MyString
   url: MyString
+  headquarters: MyString
   email: MyString
 
 two:
   name: MyString
-  headquarters: MyString
   url: MyString
+  headquarters: MyString
   email: MyString

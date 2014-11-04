@@ -16,12 +16,5 @@
  */
 
 /**home page**/
-li#joblistings{
-	list-style-type:none;
-	
-}
-
-
-span.dateposted{
-	text-align: right;
-}
+@import "bootstrap-sprockets"
+@import "bootstrap"

@@ -1,0 +1,39 @@
+div.jobposting{
+	margin:10px;
+}
+
+li#joblistings{
+	list-style-type:none;
+	border-bottom: 1px solid #D8D8D8;
+	overflow: auto;
+}
+	
+.jobpostingtitle{
+	font-size: 24px;
+	color: #A8A8A1;
+	vertical-align: middle;
+}
+
+div.jobpostingdate{
+	height: 50px;
+	line-height: 50px;
+}
+
+div.jobpostingcompany{
+	height: 50px;
+	line-height: 50px;
+}
+
+div.jobpostingtitle{
+	height: 50px;
+	line-height: 50px;
+
+}
+a.jobpostinglink span#jobtitle{
+	color:black;
+}
+
+a.jobpostinglink span#companytitle{
+	color:black;
+}
+

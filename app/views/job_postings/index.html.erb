@@ -1,5 +1,11 @@
 <% provide(:title, 'Remote Jobs') %>
-<h1>Job Postings</h1>
+<div class = "container">
+	<div class="row">
+    <div class="text-center"><h1>Job Postings</h1></div>
+	</div>
+</div>
+
+<div class = "container">
 
 <ul>
 	<% @job_postings.each do |job_posting| %>
@@ -7,6 +13,7 @@
 	<% end %>
 </ul>
 
-<%= link_to "Post a Job", newjob_path%>
+<%= link_to "Post a Job", newjob_path, class: "btn btn-block btn-primary"%>
+<div>
 
 

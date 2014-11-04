@@ -14,3 +14,14 @@
  *= require_self
  *= require bootstrap.min
  */
+
+/**home page**/
+li#joblistings{
+	list-style-type:none;
+	
+}
+
+
+span.dateposted{
+	text-align: right;
+}

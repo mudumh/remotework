@@ -1,6 +1,18 @@
-<li>
-  <p><%= link_to job_posting.job_title,job_posting_path(job_posting) %></p>
-  <p><%= job_posting.company %></p>
-  <p>Posted on <%= job_posting.posted_on %></p>
+<li id = "joblistings">
+	<% banner = "#{job_posting.job_title} at #{job_posting.company.name}" %>
+	<div class="container">
+  	<div class="row">
+  		
+  			<div class="col-md-1 col-md-offset-2">
+  			<%=job_posting.posted_on.strftime("%b %d")%>
+
+  			</div>
+  			<div class="col-md-9">
+  			<%= link_to banner,job_posting_path(job_posting)%>
+  			</div>
+  		
+  	</div>
+ 
+	</div>
   
 </li>

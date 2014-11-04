@@ -15,6 +15,7 @@ class JobPostingsController < ApplicationController
   def create
     @job_posting = JobPosting.new(job_posting_params)
     @company = Company.new(company_params)
+    debugger
     @job_posting.posted_on = Date.today    
     @job_posting.company = @company
     

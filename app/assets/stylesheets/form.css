@@ -1,0 +1,16 @@
+.form-group{
+	padding-top: 15px;
+	padding-bottom: 15px;
+
+}
+div.form-group label{
+	color:grey;
+	font-size: 24px;
+}
+
+textarea.form-control{
+	height: 225px !important;
+}
+.btn-block{
+	
+}

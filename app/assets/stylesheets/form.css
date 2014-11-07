@@ -8,8 +8,13 @@ div.form-group label{
 	font-size: 24px;
 }
 
-textarea.form-control{
+textarea.job-desc{
 	height: 225px !important;
+}
+
+textarea.appinstructions{
+	height: 125px !important;
+
 }
 .btn-block{
 	

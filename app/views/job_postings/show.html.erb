@@ -1,8 +1,8 @@
 <div class="container">
 <h1 class="text-center"><%= @job_posting.job_title %><h1>
 
-<p><%= @job_posting.posted_on %><p>
+<p><%= date(@job_posting) %><p>
 <p><%= @job_posting.company.name %><p>
-<p><%= @job_posting.job_desc %><p>
+<p><%= @job_posting.job_desc.html_safe %><p>
 <p><%= @job_posting.application_instructions %><p>
 </div>

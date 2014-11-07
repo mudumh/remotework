@@ -2,5 +2,8 @@ module JobPostingsHelper
   def jobpost(job_posting)
     "<span id='jobtitle'> #{job_posting.job_title} </span> <span id= 'companytitle'>at #{job_posting.company.name}</span>".html_safe
   end
-  def
+  
+  def date_posted(job_posting)
+    job_posting.posted_on.strftime("%b %d")
+  end
 end

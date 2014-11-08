@@ -2,12 +2,10 @@
 <%= simple_form_for @job_posting do |f| %>
 	
   <%= f.input :job_title, label: 'Job Title',wrapper_html: { class: 'form-group' },input_html: { class: 'form-control' }  %>
-	<%=tinymce%>
-	
-  <%= f.input :job_desc, as: :text, label: 'Job Description',wrapper_html: { class: 'form-group'  },input_html: { class: 'form-control job-desc tinymce' }  %>
-	
-  
 
+  <%= f.input :job_desc, as: :text, label: 'Job Description',wrapper_html: { class: 'form-group' },input_html: { class: 'form-control job-desc tinymce' }  %>
+  <%= tinymce%>
+  
   <%= f.input :application_instructions, label: 'How should the user apply to this job ?',wrapper_html: { class: 'form-group' },input_html: { class: 'form-control appinstructions' }  %>
   
   <%= f.input :category, collection: ['Programming','Design'],wrapper_html: { class: 'form-group' } ,input_html: { class: 'form-control' } %>

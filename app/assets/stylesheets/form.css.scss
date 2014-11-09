@@ -1,0 +1,21 @@
+@import "bootstrap";
+@import "bootstrap-sprockets";
+
+.form-group{
+	padding-top: 15px;
+	padding-bottom: 15px;
+
+}
+div.form-group label{
+	color:grey;
+	font-size: 24px;
+}
+
+textarea.job-desc{
+	height: 225px !important;
+}
+
+textarea.appinstructions{
+	height: 125px !important;
+
+}

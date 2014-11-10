@@ -1,5 +1,7 @@
 class JobPostingsController < ApplicationController
+
   def index
+
     @job_postings = JobPosting.all
   end
 
@@ -14,7 +16,9 @@ class JobPostingsController < ApplicationController
 
   def showpreview
     @job_posting = JobPosting.find(params[:id])
+
     render 'job_postings/showpreview'
+    
 
   end
 
@@ -23,9 +27,10 @@ class JobPostingsController < ApplicationController
     @company = Company.new(company_params)
     @job_posting.posted_on = Date.today    
     @job_posting.company = @company
-    
+  
     if @job_posting.save && @company.save
-        redirect_to jobpreview_path(@job_posting)
+      JobPosting.current_posting=(@job_posting)
+      redirect_to jobpreview_path(@job_posting)
     else
       
     end      
@@ -48,6 +53,7 @@ class JobPostingsController < ApplicationController
   def payment
     render 'payments/payment'
   end
+
 
   private
 

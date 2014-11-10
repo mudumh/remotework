@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141103171608) do
+ActiveRecord::Schema.define(version: 20141109173657) do
 
   create_table "companies", force: true do |t|
     t.string   "name"
@@ -22,15 +22,29 @@ ActiveRecord::Schema.define(version: 20141103171608) do
     t.datetime "updated_at",   null: false
   end
 
+  create_table "job_posting_previews", force: true do |t|
+    t.string   "job_title"
+    t.date     "posted_on"
+    t.string   "job_desc"
+    t.string   "category"
+    t.text     "application_instructions"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.integer  "company_id"
+  end
+
+  add_index "job_posting_previews", ["company_id"], name: "index_job_posting_previews_on_company_id"
+
   create_table "job_postings", force: true do |t|
     t.string   "job_title"
     t.date     "posted_on"
     t.text     "job_desc"
     t.string   "category"
     t.text     "application_instructions"
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.datetime "created_at",                               null: false
+    t.datetime "updated_at",                               null: false
     t.integer  "company_id"
+    t.boolean  "activated",                default: false
   end
 
   add_index "job_postings", ["company_id"], name: "index_job_postings_on_company_id"

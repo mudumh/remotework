@@ -1,0 +1,38 @@
+<div class="container">
+<div class="row">
+	<div class="col-md-12">
+
+<div class="page-header">
+    <h1><%= @temp_job_post[:job_title] %> <small> at <%= @company[:name]%></small></h1>
+</div>
+
+<div class = "row">
+	<div class="col-md-12 ">
+
+	<h3><small><%=@company[:name] %></small><h3>
+	<h3><small><%=@company[:headquarters]%></small><h3>
+	</div>
+</div>
+
+<div class = "row ">
+	<div class="col-md-12" id="showjobdesc">
+		<h3> About this position</h3>
+	  <p><%= @temp_job_post[:job_desc].html_safe %><p>
+	</div>
+</div>
+
+<div class = "row">
+	<div class="col-md-12">
+	<h3> Apply for this position</h3>
+	<p><%= @temp_job_post[:application_instructions] %><p>
+	</div>
+</div>
+<%= params %>
+<div class = "row">
+	<div class="col-md-6">
+		<%= render 'job_postings/paybutton'%>
+	</div>
+</div>
+</div>
+</div>
+</div>

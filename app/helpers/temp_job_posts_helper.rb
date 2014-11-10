@@ -1,0 +1,2 @@
+module TempJobPostsHelper
+end

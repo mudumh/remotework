@@ -19,8 +19,8 @@ class ChargesController < ApplicationController
       :description => 'Rails Stripe customer',
       :currency    => 'usd'
     )
-    
-    
+    job_id = cookies[:test]
+    logger.info "THE COOKIE IS #{job_id}"
     rescue Stripe::CardError => e
       flash[:error] = e.message
       redirect_to charges_path

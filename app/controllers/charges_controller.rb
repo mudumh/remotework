@@ -6,7 +6,7 @@ class ChargesController < ApplicationController
   def create
     # Amount in cents
     
-    @amount = 500
+    @amount = 10
     temp_job_id = cookies[:temp_job_id]
     customer = Stripe::Customer.create(
       :email => 'example@stripe.com',

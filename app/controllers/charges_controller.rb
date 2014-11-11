@@ -11,7 +11,7 @@ class ChargesController < ApplicationController
     customer = Stripe::Customer.create(
       :email => 'example@stripe.com',
       :card  => params[:stripeToken],
-      :metadata => {"job_id": temp_job_id  }
+      :metadata => {"job_id"=> temp_job_id }
     )
     
     charge = Stripe::Charge.create(

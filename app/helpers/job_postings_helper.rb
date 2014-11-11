@@ -4,7 +4,7 @@ module JobPostingsHelper
   end
   
   def date_posted(job_posting)
-    job_posting[:posted_on].strftime("%b %d")
+    job_posting[:created_at].strftime("%b %d")
   end
 
   

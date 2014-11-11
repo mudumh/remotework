@@ -1,6 +1,7 @@
 class NewPaidPost
   
-  def call
+  def call(event)
+   
     logger.info "NEW PAID POST"
     temp_job_id = cookies[:temp_job_id]
     logger.info "The cookie value is #{temp_job_id}"

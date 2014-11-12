@@ -1,8 +1,11 @@
 class JobPostingsController < ApplicationController
 
   def index
-
-    @job_postings = JobPosting.all
+    if params[:query]
+      @job_postings = JobPosting.text_search(params[:query])
+    else
+      @job_postings = JobPosting.all
+    end 
   end
 
   def show
@@ -29,8 +32,7 @@ class JobPostingsController < ApplicationController
     @job_posting.company = @company
   
     if @job_posting.save && @company.save
-      JobPosting.current_posting=(@job_posting)
-      redirect_to jobpreview_path(@job_posting)
+       redirect_to jobpreview_path(@job_posting)
     else
       
     end      

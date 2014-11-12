@@ -36,6 +36,14 @@ gem 'tinymce-rails'
 # gem 'unicorn'
 #stripe for payment
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+#fulltext searching based on lucene
+
+
+#fulltext searching based on pg db
+gem 'pg_search'
+gem 'pg',             '0.17.1'
+
+
 
 group :production do
   gem 'pg',             '0.17.1'
@@ -58,5 +66,6 @@ group :development, :test do
   gem 'byebug',      '3.4.0'
   gem 'web-console', '2.0.0.beta4'
   gem 'spring',      '1.1.3'
+
 end
 

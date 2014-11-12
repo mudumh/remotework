@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20141110140943) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "companies", force: true do |t|
     t.string   "name"
     t.string   "url"
@@ -21,19 +24,6 @@ ActiveRecord::Schema.define(version: 20141110140943) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
-
-  create_table "job_posting_previews", force: true do |t|
-    t.string   "job_title"
-    t.date     "posted_on"
-    t.string   "job_desc"
-    t.string   "category"
-    t.text     "application_instructions"
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
-    t.integer  "company_id"
-  end
-
-  add_index "job_posting_previews", ["company_id"], name: "index_job_posting_previews_on_company_id"
 
   create_table "job_postings", force: true do |t|
     t.string   "job_title"
@@ -47,7 +37,7 @@ ActiveRecord::Schema.define(version: 20141110140943) do
     t.boolean  "activated",                default: false
   end
 
-  add_index "job_postings", ["company_id"], name: "index_job_postings_on_company_id"
+  add_index "job_postings", ["company_id"], name: "index_job_postings_on_company_id", using: :btree
 
   create_table "temp_job_posts", force: true do |t|
     t.string   "job_title"
@@ -60,6 +50,6 @@ ActiveRecord::Schema.define(version: 20141110140943) do
     t.integer  "company_id"
   end
 
-  add_index "temp_job_posts", ["company_id"], name: "index_temp_job_posts_on_company_id"
+  add_index "temp_job_posts", ["company_id"], name: "index_temp_job_posts_on_company_id", using: :btree
 
 end

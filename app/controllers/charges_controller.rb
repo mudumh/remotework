@@ -21,8 +21,6 @@ class ChargesController < ApplicationController
       :metadata => {"job_id"=> temp_job_id}
     )
     
-    
-    
     rescue Stripe::CardError => e
       flash[:error] = e.message
       redirect_to charges_path

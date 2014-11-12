@@ -1,7 +1,7 @@
 <% provide(:title, 'Remote Jobs') %>
 <%= form_tag job_postings_path, method: :get do %>
   <p>
-    <%= text_field_tag :query, params[:query] %>
+    <%= text_field_tag :query, params[:query],:autocomplete => :off %>
     <%= submit_tag "Search",value: "Search for jobs here", name: nil %>
   </p>
 <% end %>

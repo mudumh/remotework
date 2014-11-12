@@ -41,7 +41,7 @@ gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
 #fulltext searching based on pg db
 gem 'pg_search'
-gem 'pg',             '0.17.1'
+
 
 
 
@@ -56,6 +56,7 @@ group :test do
   gem 'minitest-reporters', '1.0.5'
   gem 'mini_backtrace',     '0.1.3'
   gem 'guard-minitest',     '2.3.1'
+  gem 'pg',             '0.17.1'
 end
 
 # Use Capistrano for deployment
@@ -66,6 +67,7 @@ group :development, :test do
   gem 'byebug',      '3.4.0'
   gem 'web-console', '2.0.0.beta4'
   gem 'spring',      '1.1.3'
+  gem 'pg',             '0.17.1'
 
 end
 

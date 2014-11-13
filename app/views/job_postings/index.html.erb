@@ -12,7 +12,7 @@
 </div>
 
 <div class = "container">
-
+<%= will_paginate @posts %>
 <ul>
 	<% @job_postings.each do |job_posting| %>
 		<%=render job_posting%>

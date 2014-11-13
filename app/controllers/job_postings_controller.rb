@@ -2,9 +2,9 @@ class JobPostingsController < ApplicationController
 
   def index
     if params[:query]
-      @job_postings = JobPosting.text_search(params[:query])
+      @job_postings = JobPosting.text_search(params[:query]).paginate(:page => params[:page], :per_page => 10)
     else
-      @job_postings = JobPosting.all
+      @job_postings = JobPosting.paginate(:page => params[:page], :per_page => 10)
     end 
   end
 

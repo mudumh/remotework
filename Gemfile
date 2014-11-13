@@ -42,7 +42,9 @@ gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 #fulltext searching based on pg db
 gem 'pg_search'
 
-
+#pagination
+gem 'will_paginate', '~> 3.0'
+gem 'bootstrap-will_paginate'
 
 
 group :production do

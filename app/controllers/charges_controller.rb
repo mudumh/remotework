@@ -20,6 +20,12 @@ class ChargesController < ApplicationController
       :currency    => 'usd',
       :metadata => {"job_id"=> temp_job_id}
     )
+    if charge
+      puts "charge succedded"
+      @temp_job = TempJobPost.find_by(id: temp_job_id)
+      attributes = @temp_job.attributes.except!("id")
+      JobPosting.create(attributes)
+    end
     
     rescue Stripe::CardError => e
       flash[:error] = e.message

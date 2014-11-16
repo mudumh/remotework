@@ -1,6 +1,7 @@
 class ChargesController < ApplicationController
 
   def new
+  
   end
 
   def create
@@ -21,24 +22,16 @@ class ChargesController < ApplicationController
       :metadata => {"job_id"=> temp_job_id}
     )
     # TODO: charge.paid or charge["paid"]
-    if charge
-      puts "charge succedded"
+    if charge["paid"] == true
       @temp_job = TempJobPost.find_by(id: temp_job_id)
       attributes = @temp_job.attributes.except!("id")
-      JobPosting.create(attributes)
-      
+      JobPosting.create(attributes)   
     end
     
-    # need to test this
+    # need to test this and refactor this using begin-->rescue--->end
     rescue Stripe::CardError => e
       flash[:error] = e.message
       redirect_to charges_path
-    end
     
-    rescue => e
-    # Some other error; display an error message.
-    flash[:notice] = 'Some error occurred.'
-    end
-
-
+  end
 end

@@ -25,10 +25,11 @@ class ChargesController < ApplicationController
       @temp_job = TempJobPost.find_by(id: temp_job_id)
       attributes = @temp_job.attributes.except!("id")
       JobPosting.create(attributes)
+      
     end
     
     rescue Stripe::CardError => e
-      flash[:error] = e.message
+      flash[:error] = "Error you fool"
       redirect_to charges_path
     end
 

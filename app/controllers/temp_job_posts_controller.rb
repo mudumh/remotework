@@ -1,3 +1,4 @@
+require 'rails_autolink'
 class TempJobPostsController < ApplicationController
   
   def new

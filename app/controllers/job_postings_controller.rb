@@ -1,3 +1,4 @@
+require 'rails_autolink'
 class JobPostingsController < ApplicationController
 
   def index

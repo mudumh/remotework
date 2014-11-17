@@ -11,7 +11,7 @@
   posted_on = Faker::Date.between(10.days.ago, Date.today)
   category = "Software Engineering"
   desc = Faker::Lorem.paragraphs(3)
-  app_instructions = Faker::Lorem.paragraphs(1)
+  app_instructions = "http://www.google.com and email me at harsha.mvenkata@gmail.com"
   company_name = Faker::Company.name
   company = Company.create!(name: company_name) 
   

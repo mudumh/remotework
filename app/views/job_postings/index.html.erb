@@ -13,7 +13,7 @@
 		</div>
  <div class= "col-md-4 col-md-offset-2">
     		<%= form_tag job_postings_path, method: :get do %>
-    			<%= text_field_tag :query, params[:query],:autocomplete => :off,:placeholder => "harsha", :class => "searchfield2" %>
+    			<%= text_field_tag :query, params[:query],:autocomplete => :off,:placeholder => "Search: Javascript, CSS, Java etc..", :class => "searchfield2" %>
     			<%= submit_tag "Search",value: "Search", name: nil,class: "btn " %>
 			<% end %>
 		</div>

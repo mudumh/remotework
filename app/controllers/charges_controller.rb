@@ -9,8 +9,9 @@ class ChargesController < ApplicationController
     
     @amount = 100
     temp_job_id = cookies[:temp_job_id]
+    customer_email =  TempJobPost.find_by(id: temp_job_id).company[:email]
     customer = Stripe::Customer.create(
-      :email => 'example@stripe.com',
+      :email => customer_email,
       :card  => params[:stripeToken]
     )
     

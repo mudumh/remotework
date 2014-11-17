@@ -1,25 +1,36 @@
 <% provide(:title, 'Remote Jobs') %>
-<%= form_tag job_postings_path, method: :get do %>
-  <p>
-    <%= text_field_tag :query, params[:query],:autocomplete => :off %>
-    <%= submit_tag "Search",value: "Search for jobs here", name: nil %>
-  </p>
-<% end %>
+
 <div class = "container">
 	<div class="row">
-    <div class="text-center"><h1>Job Postings</h1></div>
+		
 	</div>
 </div>
 
-<div class = "container">
-<%= will_paginate @posts %>
+<div class = "row">
+
+	<div class="col-md-6">
+			<%= link_to "Post a Job", newjob_path, class: "btn btn-block btn-primary"%>
+		</div>
+ <div class= "col-md-4 col-md-offset-2">
+    		<%= form_tag job_postings_path, method: :get do %>
+    			<%= text_field_tag :query, params[:query],:autocomplete => :off,:placeholder => "harsha", :class => "searchfield2" %>
+    			<%= submit_tag "Search",value: "Search", name: nil,class: "btn " %>
+			<% end %>
+		</div>
+</div>
+
+
+</div>
+<div class="container">
+<div class="row">
+
 <ul>
 	<% @job_postings.each do |job_posting| %>
 		<%=render job_posting%>
 	<% end %>
 </ul>
-
-<%= link_to "Post a Job", newjob_path, class: "btn btn-block btn-primary"%>
-<div>
+<%= will_paginate @posts %>
+</div>
+</div>
 
 

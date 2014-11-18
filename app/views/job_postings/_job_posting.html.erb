@@ -1,16 +1,17 @@
 <li id = "joblistings">
-	<div class="container-fluid">
+	 <div class="container">
     <div class="row jobposting">
-      <div class="col-md-1  jobpostingdate">
+      <div class="col-md-1 col-xs-1  jobpostingdate">
   			 <span ><%=date_posted(job_posting)%></span>
   		</div>
       
-      <div class="col-md-10 jobpostingdate">
+      <div class="col-md-10 col-xs-10 jobpostingdate">
        <%= link_to jobpost(job_posting),job_posting_path(job_posting),
             class: "jobpostinglink"%> 
        </div>
   	
     </div>
-	</div>
+  </div>
+	
   
 </li>

@@ -28,7 +28,7 @@
   white-space: nowrap;
   vertical-align: middle;
   background-image: none;
-  border: 1px solid pink;
+  border: 1px solid black;
   border-radius: 4px;
   outline:none;
   
@@ -42,7 +42,39 @@ div.pagination{
 }
 
 .container {
-  
   width: 1170px !important;
 }
 
+.ulreset{
+  -webkit-padding-start: 0px !important;
+  -moz-padding-start: 0px !important;
+  padding-start:  0px !important;
+}
+
+.topcontainer,.backtoalljobs{
+  margin-top: 50px;
+
+}
+.backtoalljobs{
+  margin-bottom:15px;
+}
+
+div.lessmarginrow h3{
+margin-top: 10px !important;
+margin-bottom: 5px !important;
+  
+}
+div.page-header{
+  margin-bottom: 10px !important;
+  margin-top: 10px !important;
+}
+div.hr {
+  height: 2px;
+  background: black no-repeat scroll center;
+}
+div.hr hr {
+  display: none;
+}
+.bottomrow{
+  margin-bottom: 20px;
+}

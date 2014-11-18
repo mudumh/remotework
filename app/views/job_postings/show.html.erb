@@ -1,43 +1,46 @@
 <div class="container">
 
 
-	<div class = "row ">
-	<div class="col-md-6" class="alljobsbacklink">
-		<%= link_to 'Back to all jobs',job_postings_path, class: "alljobsbacklink"%>
-	</div>
+	<div class = "row backtoalljobs ">
+		<div class="col-md-8 col-xs-8" class="alljobsbacklink">
+			<%= link_to 'Back to all jobs',job_postings_path, class: "alljobsbacklink btn btn-large btn-primary"%>
+		</div>
 	</div>
 
 	<div class="row">
-		<div class="col-md-12">
-			<div class="page-header">
-    	<h1><%= @job_posting.job_title %> <small> at <%= @job_posting.company.name %></small></h1>
- 			</div>
+		<div class="col-md-12 col-xs-12">
+    	<h1><%= @job_posting.job_title %>
+    		 <small> at <%= @job_posting.company.name %>
+    		</small>
+    	</h1>
+    	<h3><small>Posted on <%= date_posted(@job_posting)%></small><h3>
+    	<div class="hr"><hr /></div>	
  		</div>   
 	</div>
 
-<div class = "row">
-	<div class="col-md-12 ">
-	<h3><small>Posted on <%= date_posted(@job_posting)%></small><h3>
-	<h3><small><%=@job_posting.company.name %></small><h3>
-	<h3><small><%=@job_posting.company.headquarters%></small><h3>
+<div class = "row lessmarginrow">
+	<div class="col-md-12 col-xs-12 ">
+		<h3><small><%=@job_posting.company.name %></small><h3>
+		<h3><small><%=@job_posting.company.headquarters%></small><h3>
+		<h3><small><%=auto_link(@job_posting.company.url)%></small><h3>
+		<div class="hr"><hr /></div>	
 	</div>
 </div>
 
 <div class = "row ">
-	<div class="col-md-12" id="showjobdesc">
+	<div class="col-md-12 col-xs-12" id="showjobdesc">
 		<h3> About this position</h3>
 	  <p><%= @job_posting.job_desc.html_safe %><p>
+	  <div class="hr"><hr /></div>
 	</div>
 </div>
 
-<div class = "row">
-	<div class="col-md-12">
+<div class = "row bottomrow">
+	<div class="col-md-12 col-xs-12">
 	<h3> Apply for this position</h3>
-	
 	<p><%= auto_link(@job_posting.application_instructions) %><p>
 	</div>
 </div>
-
 
 </div>
 </div>

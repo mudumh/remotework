@@ -10,6 +10,7 @@ class TempJobPostsController < ApplicationController
   def show
     @temp_job_post = TempJobPost.find_by(id: params[:id])
     @company = @temp_job_post.company
+    
     cookies.permanent[:temp_job_id] = params[:id]
     
     
@@ -36,7 +37,7 @@ class TempJobPostsController < ApplicationController
   end
 
   def company_params
-    params.require(:company).permit(:name,:url,:email,:headquarters)
+    params.require(:company).permit(:name,:url,:email,:headquarters,:image)
   end
 
 end

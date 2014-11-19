@@ -37,6 +37,9 @@ gem 'tinymce-rails'
 #stripe for payment
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 #fulltext searching based on lucene
+# uploads
+gem "mini_magick"
+gem 'carrierwave'
 
 
 #fulltext searching based on pg db

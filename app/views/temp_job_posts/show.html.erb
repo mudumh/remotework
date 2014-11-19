@@ -26,7 +26,7 @@
 	<h3> Apply for this position</h3>
 	<p><%= auto_link(@temp_job_post[:application_instructions]) %><p>
 
-	
+	<%= image_tag @company.image_url.to_s if @company.image_url.present? %>
 	</div>
 </div>
 

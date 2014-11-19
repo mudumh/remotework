@@ -5,11 +5,12 @@
 .form-group{
 	padding-top: 15px;
 	padding-bottom: 15px;
+	padding-left: 15px;
 
 }
 div.form-group label{
 	color:grey;
-	font-size: 24px;
+	font-size: 20px;
 }
 
 textarea.job-desc{
@@ -17,6 +18,10 @@ textarea.job-desc{
 }
 
 textarea.appinstructions{
-	height: 125px !important;
+	height: 65px !important;
 
+}
+.subsectionheader{
+	font-size:24px;
+	color:black;
 }

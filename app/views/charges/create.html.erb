@@ -1,4 +1,15 @@
-	<h2>Thanks, you paid <strong>$1.00</strong>!</h2>
-	<%= link_to "See your listing on the homepage", job_postings_path%>
-
+<div class="container">
+	<div class="row thankyou">
+		<div class="col-md-12 col-xs-12 thankyoucol">
+		<h2>Your payment of <strong>$99.00</strong> was successful!</h2>
+	</div>
+	</div>
+	<div class="row thankyou">
+		<div class="col-md-12 col-xs-12">
+		<%= link_to "See your listing on the homepage", job_postings_path, 
+		class: 'alljobsbacklink btn btn-large btn-block btn-primary'%>
+	</div>
+	</div>
+	
+</div>
 

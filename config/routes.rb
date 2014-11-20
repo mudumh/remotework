@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root "job_postings#index"
   resources :job_postings
+  resources :temp_job_posts,only: [:update]
   resources :charges
 
   mount StripeEvent::Engine => '/stripe/events' # provide a custom path
@@ -9,4 +10,5 @@ Rails.application.routes.draw do
   post '/newjob' => 'temp_job_posts#create'
   get '/newjob/:id/preview' => 'temp_job_posts#show', as: :jobpreview
   get '/payment' => 'charges#new'
+  get '/new_job/:id/edit' => 'temp_job_posts#edit', as: :jobpreview_edit
 end

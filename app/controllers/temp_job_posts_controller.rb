@@ -13,8 +13,6 @@ class TempJobPostsController < ApplicationController
     
     cookies.permanent[:temp_job_id] = params[:id]
     
-    
-
   end  
 
   def create
@@ -26,7 +24,21 @@ class TempJobPostsController < ApplicationController
       redirect_to jobpreview_path(@temp_job_post)
     else
     end
-
+  end
+  
+  def edit
+     @temp_job_post = TempJobPost.find_by(id: params[:id])
+     @company = @temp_job_post.company
+  end
+  
+  def update
+    
+    @temp_job_post = TempJobPost.find_by(id: params[:id])
+    @company = @temp_job_post.company
+    if @temp_job_post.update_attributes(job_params) && @company.update_attributes(company_params)
+      redirect_to jobpreview_path(@temp_job_post)
+    else
+    end
     
   end
 

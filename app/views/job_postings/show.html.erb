@@ -19,13 +19,17 @@
 	</div>
 
 <div class = "row lessmarginrow">
-	<div class="col-md-12 col-xs-12 ">
+	<div class="col-md-10 col-xs-10">
 		<h3><small><%=@job_posting.company.name %></small><h3>
 		<h3><small><%=@job_posting.company.headquarters%></small><h3>
 		<h3><small><%=auto_link(@job_posting.company.url)%></small><h3>
-		<div class="hr"><hr /></div>	
 	</div>
+	<div class = "col-md-2 col-xs-2 pull-right">
+		<%= image_tag @job_posting.company.image_url.to_s if @job_posting.company.image_url.present? %>	
+	</div>	
 </div>
+
+<div class="hr"><hr /></div>	
 
 <div class = "row ">
 	<div class="col-md-12 col-xs-12" id="showjobdesc">

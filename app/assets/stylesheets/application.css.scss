@@ -88,11 +88,15 @@ div.thankyou{
   margin-top:20px;
 }
 
-.btn{
+.btn-primary{
 
   border-bottom: 4px outset #428bca ;
 }
+.btn-primary:active{
 
-.btn:active{
+  border-bottom: 4px outset #428bca ;
+}
+body{
   
 }
+

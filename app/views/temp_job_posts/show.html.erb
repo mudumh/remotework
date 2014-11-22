@@ -1,32 +1,40 @@
 <div class="container">
-<div class="row">
-	<div class="col-md-12">
 
-<div class="page-header">
-    <h1><%= @temp_job_post[:job_title] %> <small> at <%= @company[:name]%></small></h1>
-</div>
-
-<div class = "row">
-	<div class="col-md-12 ">
-
-	<h3><small><%=@company[:name] %></small><h3>
-	<h3><small><%=@company[:headquarters]%></small><h3>
+	<div class="row">
+		<div class="col-md-12 col-xs-12">
+    	 <h1><%= @temp_job_post[:job_title] %> 
+    	 	<small> at <%= @company[:name]%></small>
+    	 </h1>
+    	<h3><small>Posted on <%= date_posted(@temp_job_post)%></small><h3>
+    	<div class="hr"><hr /></div>	
+ 		</div>   
 	</div>
-</div>
+
+<div class = "row lessmarginrow">
+	<div class="col-md-10 col-xs-10 ">
+		<h3><small><%=@company[:name] %></small><h3>
+		<h3><small><%=@company[:headquarters]%></small><h3>
+		<h3><small><%=auto_link(@company.url)%></small><h3>
+		</div>
+		<div class = "col-md-2 col-xs-2 pull-right">
+			<%= image_tag @company.image_url.to_s if @company.image_url.present? %>	
+		</div>	
+		
+	</div>
+<div class="hr"><hr /></div>	
 
 <div class = "row ">
-	<div class="col-md-12" id="showjobdesc">
+	<div class="col-md-12 col-xs-12" id="showjobdesc">
 		<h3> About this position</h3>
 	  <p><%= @temp_job_post[:job_desc].html_safe %><p>
+	  <div class="hr"><hr /></div>
 	</div>
 </div>
 
-<div class = "row">
-	<div class="col-md-12">
+<div class = "row bottomrow">
+	<div class="col-md-12 col-xs-12">
 	<h3> Apply for this position</h3>
 	<p><%= auto_link(@temp_job_post[:application_instructions]) %><p>
-
-	<%= image_tag @company.image_url.to_s if @company.image_url.present? %>
 	</div>
 </div>
 
@@ -52,6 +60,6 @@
 	
 
 </div>
-</div>
-</div>
+
+
 </div>

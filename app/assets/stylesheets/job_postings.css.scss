@@ -20,6 +20,9 @@ div.jobpostingdate{
 	height: 50px;
 	line-height: 50px;
 }
+div.jobpostingdate span{
+	font-weight: bold;
+}
 
 div.jobpostingcompany{
 	height: 50px;
@@ -32,16 +35,20 @@ div.jobpostingtitle{
 
 }
 a.jobpostinglink span#jobtitle{
-	color:black;
+	font-size: 1.2em;
+	text-decoration: underline;
+	color: #39c;
+	
 }
 
 a.jobpostinglink span#companytitle{
 	color:black;
-	font-weight: bold;
+	font-size: 1.2em;	
+	
 }
 
-a.jobpostinglink span#companytitle{
-	color:grey;
+a.jobpostinglink:hover{
+	text-decoration:none;
 }
 
 div#showjobdesc p{

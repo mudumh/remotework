@@ -68,7 +68,7 @@ div.page-header{
 }
 div.hr {
   height: 2px;
-  background: black no-repeat scroll center;
+  background: #d3d3d3 no-repeat scroll center;
 }
 div.hr hr {
   display: none;
@@ -97,6 +97,22 @@ div.thankyou{
   border-bottom: 4px outset #428bca ;
 }
 body{
+  
+}
+div.headertitle p{
+  text-align:center;
+  font-weight:bold;
+  font-size:30px;
+  
+}
+
+h3 small{
+  color: #221E19;
+  font-weight:bold;
+}
+
+div.appinstructions_div * {
+font-size: 20px !important;
   
 }
 

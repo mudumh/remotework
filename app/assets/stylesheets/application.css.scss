@@ -89,13 +89,18 @@ div.thankyou{
 }
 
 .btn-primary{
-
-  border-bottom: 4px outset #428bca ;
+  background-color:#E75037;
+  border-bottom: 4px outset #E75037 ;
 }
 .btn-primary:active{
-
-  border-bottom: 4px outset #428bca ;
+  background-color:pink;
+  border-bottom: 4px outset #E75037 ;
 }
+.btn-primary:hover{
+  background-color:#B9402C;
+  border-bottom: 4px outset #B9402C ;
+}
+
 body{
   
 }
@@ -116,3 +121,7 @@ font-size: 20px !important;
   
 }
 
+.control-label{
+  color:#E75037 !important;
+
+}

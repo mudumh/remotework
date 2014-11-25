@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container showjobdetails">
 
 
 	<div class = "row backtoalljobs ">
@@ -9,9 +9,8 @@
 
 	<div class="row">
 		<div class="col-md-12 col-xs-12">
-    	<h1><%= @job_posting.job_title %>
-    		 <small> at <%= @job_posting.company.name %>
-    		</small>
+    	<h1><span class="jobtitleheader"><%= @job_posting.job_title %></span>
+    		
     	</h1>
     	<h3><small>Posted on <%= date_posted(@job_posting)%></small><h3>
     	<div class="hr"><hr /></div>	
@@ -20,9 +19,9 @@
 
 <div class = "row lessmarginrow">
 	<div class="col-md-10 col-xs-10">
-		<h3><small><%=@job_posting.company.name %></small><h3>
-		<h3><small><%=@job_posting.company.headquarters%></small><h3>
-		<h3><small><%=auto_link(@job_posting.company.url)%></small><h3>
+		<h3><small>Company: <%=@job_posting.company.name %></small><h3>
+		<h3><small>Headquarters:  <%=@job_posting.company.headquarters%></small><h3>
+		<h3><small>Homepage:  <%=auto_link(@job_posting.company.url)%></small><h3>
 	</div>
 	<div class = "col-md-2 col-xs-2 pull-right">
 		<%= image_tag @job_posting.company.image_url.to_s if @job_posting.company.image_url.present? %>	
@@ -34,15 +33,15 @@
 <div class = "row ">
 	<div class="col-md-12 col-xs-12" id="showjobdesc">
 		<h3 class="titleheader"> About this position</h3>
-	  <p><%= @job_posting.job_desc.html_safe %><p>
+	  <p class="jobdesc"> <%= @job_posting.job_desc.html_safe %><p>
 	  <div class="hr"><hr /></div>
 	</div>
 </div>
 
 <div class = "row bottomrow ">
 	<div class="col-md-12 col-xs-12 appinstructions_div">
-	<h3> Apply for this position</h3>
-	<p><%= auto_link(@job_posting.application_instructions) %><p>
+	<h3 class="titleheader"> Apply for this position</h3>
+	<p class="appinstructions"><%= auto_link(@job_posting.application_instructions) %><p>
 	</div>
 </div>
 

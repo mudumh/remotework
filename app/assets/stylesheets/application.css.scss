@@ -68,7 +68,7 @@ div.page-header{
 }
 div.hr {
   height: 2px;
-  background: #d3d3d3 no-repeat scroll center;
+  background: #F0EBE6 no-repeat scroll center;
 }
 div.hr hr {
   display: none;
@@ -121,7 +121,22 @@ font-size: 20px !important;
   
 }
 
-.control-label{
-  color:#E75037 !important;
 
+
+p.appinstructions{
+  background-color:#F0EBE6;
+  border: 1px solid #F0EBE6;
+  border-radius: 5px;
+  padding:3px;
+
+}
+h3.titleheader{
+  color:#74281C !important;
+}
+
+span.jobtitleheader{
+  color:#74281C !important;
+}
+div.showjobdetails{
+  width: 980px !important;
 }

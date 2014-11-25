@@ -2,7 +2,7 @@
 @import "bootstrap";
 
 
-li#joblistings{
+li.joblistings{
 	list-style-type:none;
 	border-bottom: 1px solid #D8D8D8;
 	overflow: hidden;
@@ -36,13 +36,13 @@ div.jobpostingtitle{
 }
 a.jobpostinglink span#jobtitle{
 	font-size: 1.2em;
-	text-decoration: underline;
-	color: #39c;
+	text-decoration: none;
+	color: #E75037;
 	
 }
 
 a.jobpostinglink span#companytitle{
-	color:black;
+	color:#808080;
 	font-size: 1.2em;	
 	
 }
@@ -63,7 +63,11 @@ div.postbutton a {
 	font-size:30px;
 	
 }
+li.joblistings:hover
+{
+		background-color:#FFF9E0;
 
+}
 
 align{
 	height: 40px !important;

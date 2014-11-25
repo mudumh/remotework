@@ -32,7 +32,7 @@
 
 <div class = "row ">
 	<div class="col-md-12 col-xs-12" id="showjobdesc">
-		<h3 class="titleheader"> About this position</h3>
+		<h2 class="titleabout"> About this position</h2>
 	  <p class="jobdesc"> <%= @job_posting.job_desc.html_safe %><p>
 	  <div class="hr"><hr /></div>
 	</div>
@@ -40,11 +40,9 @@
 
 <div class = "row bottomrow ">
 	<div class="col-md-12 col-xs-12 appinstructions_div">
-	<h3 class="titleheader"> Apply for this position</h3>
+	<h2 class="titleheader"> Apply for this position</h2>
 	<p class="appinstructions"><%= auto_link(@job_posting.application_instructions) %><p>
 	</div>
 </div>
 
-</div>
-</div>
 </div>

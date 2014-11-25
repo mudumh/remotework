@@ -37,13 +37,17 @@ div.jobpostingtitle{
 a.jobpostinglink span#jobtitle{
 	font-size: 1.2em;
 	text-decoration: none;
-	color: #E75037;
+	color: #74281C;
+	font-weight: bolder;
+
 	
 }
 
 a.jobpostinglink span#companytitle{
-	color:#808080;
+	color:#74281C;
 	font-size: 1.2em;	
+	
+	font-weight: normal;
 	
 }
 
@@ -52,7 +56,7 @@ a.jobpostinglink:hover{
 }
 
 div#showjobdesc *{
-font-size: 20px!important;
+font-size: 18px!important;
 color:black;
 font-family:Arial, sans-serif !important;
 line-height: 1.3;

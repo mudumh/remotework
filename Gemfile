@@ -14,6 +14,7 @@ gem 'simple_form'
 #Stripe webhook integration for Rails applications
 gem 'stripe_event'
 
+gem 'bcrypt'
 # Use jQuery as the JavaScript library
 gem 'jquery-rails', '~> 4.0.0.beta2'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
@@ -21,7 +22,7 @@ gem 'jquery-rails', '~> 4.0.0.beta2'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'sdoc', group: :doc
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'

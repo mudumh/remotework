@@ -1,0 +1,2 @@
+module JobNotifiersHelper
+end

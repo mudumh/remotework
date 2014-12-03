@@ -1,0 +1,5 @@
+<%= form_for :subscriber, :url => subscriber_path do |f|%>
+	<f.label "Subscriber to get the latest jobs in your email" ,:email >
+	<%= f.text_field :email %>
+	<%= f.submit %>
+<%end%>

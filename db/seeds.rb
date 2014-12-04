@@ -8,7 +8,25 @@
 
 15.times do |n|
   job_title  = Faker::Name.title 
-  posted_on = Faker::Date.between(10.days.ago, Date.today)
+  posted_on = 3.days.ago
+  category = "Software Engineering"
+  desc = Faker::Lorem.paragraphs(3)
+  app_instructions = "http://www.google.com and email me at harsha.mvenkata@gmail.com"
+  company_name = Faker::Company.name
+  company = Company.create!(name: company_name) 
+  
+  JobPosting.create!(job_title:  job_title,
+               posted_on: posted_on,
+               job_desc: desc,
+               category: category,
+               application_instructions: app_instructions,
+               company: company
+               )
+end
+
+15.times do |n|
+  job_title  = Faker::Name.title 
+  posted_on = 33.days.ago
   category = "Software Engineering"
   desc = Faker::Lorem.paragraphs(3)
   app_instructions = "http://www.google.com and email me at harsha.mvenkata@gmail.com"

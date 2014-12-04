@@ -6,7 +6,5 @@ module SubscribersHelper
     "<span id='jobtitle'> #{job_posting.job_title} </span> &nbsp;".html_safe
   end
   
-  def date_posted(job_posting)
-    job_posting[:created_at].strftime("%b %d")
-  end
+
 end

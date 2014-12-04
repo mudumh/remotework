@@ -1,5 +1,12 @@
-<h1>SubscriberMailer#jobs_notifier</h1>
-
-<p>
-  <%= @greeting %>, find me in app/views/subscriber_mailer/jobs_notifier.html.erb
-</p>
+<h1>Hello There! </h1>
+<h3>Check out the new remote programmerg jobs  </h3>
+<ul>
+<%	@listed_jobs.each do |job_posting|%>
+			<li class = "joblistings">
+	 			<div class="container">
+    			<p> <%= link_to jobpost(job_posting),job_posting_path(job_posting) %><p>
+            
+  			</div>
+			</li>
+	<%end%>
+</ul>

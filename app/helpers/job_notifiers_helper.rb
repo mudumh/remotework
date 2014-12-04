@@ -7,4 +7,6 @@ module JobNotifiersHelper
     end
     @email_list
   end
+  
+ 
 end

@@ -28,7 +28,7 @@
   white-space: nowrap;
   vertical-align: middle;
   background-image: none;
-  border: 1px solid black;
+  border: 1px solid #0C96B9;
   border-radius: 4px;
   outline:none;
   
@@ -105,16 +105,17 @@ div.thankyou{
 }
 
 .btn-primary{
-  background-color:#E75037;
-  border-bottom: 4px outset #E75037 ;
+  background-color:white;
+  border: 1px outset #0C96B9 ;
+  color:#0C96B9;
 }
 .btn-primary:active{
-  background-color:pink;
-  border-bottom: 4px outset #E75037 ;
+  background-color:white;
+  border: 1px outset #0C96B9 ;
 }
 .btn-primary:hover{
-  background-color:#B9402C;
-  border-bottom: 4px outset #B9402C ;
+  background-color:none;
+  border: 1px outset #0C96B9 ;
 }
 
 body{
@@ -122,15 +123,15 @@ body{
 }
 div.headertitle p{
   text-align:center;
-  font-weight:bold;
   font-size:30px;
+  color:white;
   
 }
 div.subheadertitle p{
   text-align:center;
-  font-weight:bold;
   font-size:20px;
   padding-top:15px;
+  color:white;
   
 }
 
@@ -171,6 +172,10 @@ div.showjobdetails{
 .subscribe-button{
   padding-left:30px;
   padding-right:30px;
+  border: 1px solid black;
+  background-color:#096F89;
+  color:white;
+
 }
 
 div.container.header{
@@ -184,4 +189,7 @@ div.backgroundcontainer{
 
 div.logo{
   padding-top:25px;
+}
+.emailbox:active{
+  border: 2px solid grey; 
 }

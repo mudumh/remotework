@@ -130,6 +130,7 @@ div.subheadertitle p{
   text-align:center;
   font-weight:bold;
   font-size:20px;
+  padding-top:15px;
   
 }
 
@@ -172,6 +173,15 @@ div.showjobdetails{
   padding-right:30px;
 }
 
-div.header{
-  margin-top:30px;
+div.container.header{
+  
+}
+div.backgroundcontainer{
+  width:100%;
+  background-color:#0DAAD1;
+
+}
+
+div.logo{
+  padding-top:25px;
 }

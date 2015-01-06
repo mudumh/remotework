@@ -1,16 +1,17 @@
+<div class = "row subscriber">
 <%= form_for :subscriber,:html =>{:class => "form-group"}, :url => subscriber_path do |f|%>
-	<div class = "row">
+
 		
- 		<div class= "col-md-4 col-xs-4">
+ 		<div class= "col-md-6 col-xs-4">
  			<f.label :email >
 			<%= f.text_field :email,autofocus: true, :placeholder=> "Enter your email to receive latest jobs in your inbox",:class => "form-control" %>
     	
   	</div>
-  	<div class= "col-md-4 col-xs-4">
-    	<%= f.submit 'Subscribe!', :class => 'btn subscribe-button' %>
+  	<div class= "col-md-6 col-xs-4">
+    	<%= f.submit 'Subscribe!', :class => 'btn subscribe-button btn-block btn btn-primary btn-block' %>
   	</div>
- 		
+ 		<%end%>
 </div>
 	
-<%end%>
+
 

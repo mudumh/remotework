@@ -49,14 +49,21 @@
   padding-start:  0px !important;
 }
 
-.topcontainer,.backtoalljobs{
+.backtoalljobs{
   margin-top: 50px;
 
+}
+.topcontainer{
+margin-top: 20px;
+  
 }
 .backtoalljobs{
   margin-bottom:15px;
 }
 
+div.subscriber{
+  margin-top:30px;
+}
 div.lessmarginrow h3{
 margin-top: 10px !important;
 margin-bottom: 5px !important;
@@ -71,6 +78,15 @@ div.hr {
   background: #F0EBE6 no-repeat scroll center;
 }
 div.hr hr {
+  display: none;
+}
+
+div.hrstrong {
+  height: 2px;
+  background: grey no-repeat scroll center;
+  margin-top:20px;
+}
+div.hrstrong hr {
   display: none;
 }
 .bottomrow{
@@ -108,6 +124,12 @@ div.headertitle p{
   text-align:center;
   font-weight:bold;
   font-size:30px;
+  
+}
+div.subheadertitle p{
+  text-align:center;
+  font-weight:bold;
+  font-size:20px;
   
 }
 
@@ -148,4 +170,8 @@ div.showjobdetails{
 .subscribe-button{
   padding-left:30px;
   padding-right:30px;
+}
+
+div.header{
+  margin-top:30px;
 }

@@ -1,11 +1,26 @@
 <% provide(:title, 'Remote Jobs') %>
-
-<div class = "container topcontainer">
-		
+<div class = "container">
+	<div class="row">
+		<div class="col-md-12 col-xs-12 subheadertitle">
+			<p>RemoteProgrammerJobs.com is the best place to find remote programming jobs.</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12 col-xs-12 subheadertitle">
+		<p>
+			Follow us on twitter @ 
+			and subscribe below to get the latest jobs in your inbox once a week!
+		</p>
+		</div>
+	</div>
+</div>
+<div class="container">
 	<%=render 'subscribers/new'%>
+</div>
+<div class="hrstrong"><hr /></div>	
+<div class = "container topcontainer">
 	
 	<div class = "row">
-		
 		<div class= "col-md-6 col-xs-4 postbuttoncontainer">
 			<%= link_to "Post a Job", newjob_path, class: "btn btn-primary btn-block"%>
 		</div>
@@ -18,7 +33,7 @@
 		</div>
  		
  		<div class= "col-md-1 col-xs-1">
-    	<%= submit_tag "Search",value: "Search", name: nil,class: "btn " %>
+    	<%= submit_tag "Search",value: "Search", name: nil,class: "btn btn btn-primary " %>
 			<% end %>
 		</div>
 	</div>

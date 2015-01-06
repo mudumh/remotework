@@ -37,14 +37,14 @@ div.jobpostingtitle{
 a.jobpostinglink span#jobtitle{
 	font-size: 1.2em;
 	text-decoration: none;
-	color: #74281C;
+	color:#096F89;
 	font-weight: bolder;
 
 	
 }
 
 a.jobpostinglink span#companytitle{
-	color:#74281C;
+	color:#096F89;
 	font-size: 1.2em;	
 	
 	font-weight: normal;
@@ -72,10 +72,12 @@ div.postbutton a {
 }
 li.joblistings:hover
 {
-		background-color:#FFF9E0;
+		background-color:#E2EEF1;
 
 }
 
 align{
 	height: 40px !important;
 }
+div.grow { transition: all .2s ease-in-out; }
+div.grow:hover { -webkit-transform: scale(1.1); transform: scale(1.1); }

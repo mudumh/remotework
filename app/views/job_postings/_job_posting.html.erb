@@ -1,10 +1,10 @@
-<li class = "joblistings">
+<li class = "joblistings ">
 	 <div class="container">
     <div class="row jobposting">
       <div class="col-md-1 col-xs-1  jobpostingdate">
   			 <span ><%=date_posted(job_posting)%></span>
   		</div>
-      <div class="col-md-5 col-xs-5 jobpostingdate">
+      <div class="col-md-5 col-xs-5 jobpostingdate grow">
       <%= link_to jobpost(job_posting),job_posting_path(job_posting),
             class: "jobpostinglink"%>
       

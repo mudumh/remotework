@@ -19,9 +19,9 @@
 
 <div class = "row lessmarginrow">
 	<div class="col-md-10 col-xs-10">
-		<h3><small>Company: <%=@job_posting.company.name %></small><h3>
-		<h3><small>Headquarters:  <%=@job_posting.company.headquarters%></small><h3>
-		<h3><small>Homepage:  <%=auto_link(@job_posting.company.url)%></small><h3>
+		<h3 class="companyinfo"><small>Company: <%=@job_posting.company.name %></small></h3>
+		<h3 class="companyinfo"><small>Headquarters:  <%=@job_posting.company.headquarters%></small></h3>
+		<h3 class="companyinfo"><small>Homepage:  <%=auto_link(@job_posting.company.url)%></small></h3>
 	</div>
 	<div class = "col-md-2 col-xs-2 pull-right">
 		<%= image_tag @job_posting.company.image_url.to_s if @job_posting.company.image_url.present? %>	
@@ -30,7 +30,7 @@
 
 <div class="hr"><hr /></div>	
 
-<div class = "row ">
+<div class = "row">
 	<div class="col-md-12 col-xs-12" id="showjobdesc">
 		<h2 class="titleabout"> About this position</h2>
 	  <p class="jobdesc"> <%= @job_posting.job_desc.html_safe %><p>
@@ -38,7 +38,7 @@
 	</div>
 </div>
 
-<div class = "row bottomrow ">
+<div class = "row bottomrow">
 	<div class="col-md-12 col-xs-12 appinstructions_div">
 	<h2 class="titleheader"> Apply for this position</h2>
 	<p class="appinstructions"><%= auto_link(@job_posting.application_instructions) %><p>

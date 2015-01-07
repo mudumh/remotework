@@ -28,7 +28,7 @@
   white-space: nowrap;
   vertical-align: middle;
   background-image: none;
-  border: 1px solid #0C96B9;
+  border: 2px solid #0C96B9;
   border-radius: 4px;
   outline:none;
   
@@ -109,8 +109,8 @@ div.thankyou{
 }
 
 .btn-primary,.btn-primary:visited{
-  background-color:white;
-  border: 1px outset #0C96B9 ;
+  background-color:#E9F6F9;
+  border: 2px solid #0E404D ;
   color:#0C96B9;
 }
 .btn-primary:active{
@@ -121,6 +121,7 @@ div.thankyou{
 .btn-primary:hover{
   border: 1px outset #0C96B9 ;
   background-color:#24A0C0;
+  color:white;
 }
 
 

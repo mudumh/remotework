@@ -14,25 +14,7 @@
 
   <%= f.input :application_instructions, label: 'How should the user apply to this job ?',wrapper_html: { class: 'form-group' },input_html: { class: 'form-control appinstructions' }  %>
 </div>
-<div class= "row bottomrow">
-  <div class="hr"><hr /></div>
-  <%= f.label "About the Company", class: 'subsectionheader'%>
-  <%= simple_fields_for @company ,:html => { :multipart => true } do |fa| %>
-		<%=fa.input :name, label: 'Company Name',wrapper_html: { class: 'form-group' },input_html: { class: 'form-control' }%>
-		
-		<%=fa.input :url, label: 'Home page',wrapper_html: { class: 'form-group' },input_html: { class: 'form-control' }%>
-		
-		<%=fa.input :headquarters, label: 'Headquarters',wrapper_html: { class: 'form-group' },input_html: { class: 'form-control' }%>
-    
-    <%=fa.input :email, label: 'Email',wrapper_html: { class: 'form-group' },input_html: { class: 'form-control' }%>
-    
-    <%= fa.input :image,label: "Upload company logo", as: :file,wrapper_html: { class: 'form-group buttonupload' } %>
- 	<% end %>
  	<%= f.submit 'Preview posting', class: 'btn btn-primary btn-lg btn-block'  %>
- </div>
-
-
-
 
 <% end %>
 </div>

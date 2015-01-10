@@ -5,18 +5,10 @@
              prohibited this posting from being saved:</h4>
 
           <ul>
-          <% @company.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
-          <% end %>
-          </ul>
-
-          <ul>
           <% @temp_job_post.errors.full_messages.each do |msg| %>
             <li><%= msg %></li>
           <% end %>
           </ul>
-
-
         </div>
       <% end %>
       

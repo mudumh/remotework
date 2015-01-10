@@ -26,6 +26,10 @@ gem 'sdoc', group: :doc
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
+# gem for in-place editing.
+
+gem 'best_in_place', '~> 3.0.1'
+gem 'responders', '~> 2.0'
 #gem 'jquery-turbolinks'
 
 # used to seed the db.

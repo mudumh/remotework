@@ -1,6 +1,7 @@
 require 'rails_autolink'
+
 class TempJobPostsController < ApplicationController
-  
+  respond_to :html, :json  
   def new
     set_company
     @temp_job_post = TempJobPost.new
@@ -33,13 +34,16 @@ class TempJobPostsController < ApplicationController
   def update
     
     @temp_job_post = TempJobPost.find_by(id: params[:id])
-    @company = @temp_job_post.company
-    if @temp_job_post.update_attributes(job_params) && @company.update_attributes(company_params)
-      redirect_to jobpreview_path(@temp_job_post)
+    respond_to do |format|
+    if @temp_job_post.update_attributes(job_params)
+      format.html { redirect_to jobpreview_path(@temp_job_post), :notice => 'User was successfully updated.' }
+      format.json { respond_with_bip(@temp_job_post) }
     else
-      render :edit
+      format.html { render :action => "edit" }
+      format.json { respond_with_bip(@temp_job_post) }
     end
-    
+  end
+  
   end
 
   private

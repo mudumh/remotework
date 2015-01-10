@@ -1,10 +1,12 @@
 
 <div class="container showjobdetails">
 
-
+	
+	
 	<div class="row">
 		<div class="col-md-12 col-xs-12">
-    	<h1><span class="jobtitleheader"><%= @temp_job_post[:job_title] %></span>
+    	
+    	<h1><span class="jobtitleheader"><%= best_in_place  @temp_job_post, :job_title, :as => :input %></span>
     		
     	</h1>
     	<h3><small>Posted on <%= date_posted(@temp_job_post)%></small><h3>
@@ -14,9 +16,9 @@
 
 <div class = "row lessmarginrow">
 	<div class="col-md-10 col-xs-10">
-	<h3 class="companyinfo"><small>Company: <%=@company[:name] %></small><h3>
-		<h3 class="companyinfo"><small>Headquarters: <%=@company[:headquarters]%></small><h3>
-		<h3 class="companyinfo"><small>Homepage: <%=auto_link(@company.url)%></small><h3>
+	<h3 class="companyinfo"><small>Company: <%= best_in_place  @company, :name, :as => :input %></small><h3>
+		<h3 class="companyinfo"><small>Headquarters: <%= best_in_place  @company, :headquarters, :as => :input %></small><h3>
+		<h3 class="companyinfo"><small>Homepage: <%= best_in_place  @company, :url, :as => :input %></small><h3>
 	</div>
 	<div class = "col-md-2 col-xs-2 pull-right">
 		<%= image_tag @company.image_url.to_s if @company.image_url.present? %>		
@@ -28,6 +30,8 @@
 <div class = "row ">
 	<div class="col-md-12 col-xs-12" id="showjobdesc">
 		<h2 class="titleabout"> About this position</h2>
+		<%= link_to 'Edit Job Details', edit_company_temp_job_post_path(@company,
+		@temp_job_post) %>
 	  <p class="jobdesc"> <%= @temp_job_post[:job_desc].html_safe %><p>
 	  <div class="hr"><hr /></div>
 	</div>
@@ -36,7 +40,8 @@
 <div class = "row bottomrow ">
 	<div class="col-md-12 col-xs-12 appinstructions_div">
 	<h2 class="titleapply"> Apply for this position</h2>
-	<p class="appinstructions"><%= auto_link(@temp_job_post[:application_instructions]) %><p>
+	
+	<p class="appinstructions"><%= best_in_place  @temp_job_post, :application_instructions, :as => :input %><p>
 	</div>
 </div>
 

@@ -1,5 +1,5 @@
 class CompaniesController < ApplicationController
-  
+  respond_to :html, :json  
   def new
     @company = Company.new
   end
@@ -14,9 +14,13 @@ class CompaniesController < ApplicationController
   end
   
   def edit
+     @company = Company.find(params[:id])
   end
   
   def update
+    @company = Company.find_by(id: params[:id])
+    @company.update_attributes(company_params)
+    respond_with @company
   end
 
   private
@@ -24,4 +28,5 @@ class CompaniesController < ApplicationController
   def company_params
     params.require(:company).permit(:name,:url,:headquarters,:image)
   end
+
 end

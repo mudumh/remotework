@@ -9,13 +9,20 @@
 //
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
-//
+// 
 //= require jquery
-
 //= require jquery_ujs
-
 //= require bootstrap-sprockets
 //= require bootstrap.min
 //= require tinymce-jquery
+//= require jquery.purr
 //= require_tree .
+//= require best_in_place
+jQuery(document).ready(
+	function($) { $('.best_in_place').best_in_place(); 
+});
+
+
+
+
 

@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   root "job_postings#index"
   resources :job_postings
-
-  resources :temp_job_posts,only: [:update]
+  resources :companies, only:[:new, :create,:update,:edit] do
+    resources :temp_job_posts,only: [:update,:new,:create]
+  end
+  
   resources :charges
   resources :account_activations, only: [:edit]
   post 'subscriber/' => "subscribers#create"

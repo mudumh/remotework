@@ -1,40 +1,15 @@
 <div class= "container">
 	<div class= "row">
-<%= simple_form_for @temp_job_post, url: newjob_path,
-:html => { :multipart => true } do |f| %>
-    <%= render 'temp_job_posts/errors' %>
+    <%= simple_form_for [@company,@temp_job_post],
+                :html => { :multipart => true } do |f| %>
+      <%= render 'temp_job_posts/errors' %>
+      <%= f.label "About the job", class: 'subsectionheader'%>
+      <%= f.input :job_title, label: 'Job Title',wrapper_html: { class: 'form-group' },input_html: { class: 'form-control' }  %>
+      <%=tinymce%>
+	    <%= f.input :job_desc, as: :text, label: 'Job Description',wrapper_html: { class: 'form-group'  },input_html: { class: 'form-control job-desc tinymce' }  %>
+	    <%= f.input :application_instructions, label: 'How should the user apply to this job ?',wrapper_html: { class: 'form-group' },input_html: { class: 'form-control appinstructions' }  %>
+  </div>  
+  <%= f.submit 'Next Step', class: 'btn btn-primary btn-lg btn-block'  %>
+	<% end %>
 
-
-
-	<%= f.label "About the job", class: 'subsectionheader'%>
-	
-  <%= f.input :job_title, label: 'Job Title',wrapper_html: { class: 'form-group' },input_html: { class: 'form-control' }  %>
-	<%=tinymce%>
-	
-  <%= f.input :job_desc, as: :text, label: 'Job Description',wrapper_html: { class: 'form-group'  },input_html: { class: 'form-control job-desc tinymce' }  %>
-	
-
-  <%= f.input :application_instructions, label: 'How should the user apply to this job ?',wrapper_html: { class: 'form-group' },input_html: { class: 'form-control appinstructions' }  %>
-</div>
-<div class= "row bottomrow">
-  <div class="hr"><hr /></div>
-  <%= f.label "About your Company", class: 'subsectionheader'%>
-  <%= simple_fields_for @company ,:html => { :multipart => true } do |fa| %>
-		<%=fa.input :name, label: 'Company Name',wrapper_html: { class: 'form-group' },input_html: { class: 'form-control' }%>
-		
-		<%=fa.input :url, label: 'Home page',wrapper_html: { class: 'form-group' },input_html: { class: 'form-control' }%>
-		
-		<%=fa.input :headquarters, label: 'Headquarters',wrapper_html: { class: 'form-group' },input_html: { class: 'form-control' }%>
-    
-    <%=fa.input :email, label: 'Email',wrapper_html: { class: 'form-group' },input_html: { class: 'form-control' }%>
-    
-    <%= fa.input :image,label: "Upload company logo", as: :file,wrapper_html: { class: 'form-group buttonupload' } %>
- 	<% end %>
- 	<%= f.submit 'Preview posting', class: 'btn btn-primary btn-lg btn-block'  %>
- </div>
-
-
-
-
-<% end %>
 </div>

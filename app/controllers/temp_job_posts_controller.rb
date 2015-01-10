@@ -2,25 +2,23 @@ require 'rails_autolink'
 class TempJobPostsController < ApplicationController
   
   def new
+    set_company
     @temp_job_post = TempJobPost.new
-    @company = Company.new
-    render 'temp_job_posts/new'
   end
 
   def show
     @temp_job_post = TempJobPost.find_by(id: params[:id])
     @company = @temp_job_post.company
-    
     cookies.permanent[:temp_job_id] = params[:id]
-    
-  end  
+   end  
 
   def create
 
     @temp_job_post = TempJobPost.new(job_params)
-    @company = Company.new(company_params)
+    set_company
+
     @temp_job_post.company = @company
-    if @temp_job_post.save && @company.save
+    if @temp_job_post.save 
       redirect_to jobpreview_path(@temp_job_post)
     else
       render :new
@@ -49,9 +47,13 @@ class TempJobPostsController < ApplicationController
   def job_params
     params.require(:temp_job_post).permit(:job_title,:job_desc,:category,:application_instructions)
   end
-
+  
+  def set_company
+    @company = Company.find(company_params[:company_id])
+  end
+  
   def company_params
-    params.require(:company).permit(:name,:url,:email,:headquarters,:image)
+    params.permit(:company_id)
   end
 
 end

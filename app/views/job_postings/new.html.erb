@@ -1,22 +1,12 @@
 <div class= "container">
 <%= simple_form_for @job_posting do |f| %>
-	
+	<%= render 'companies/errors' %>
   <%= f.input :job_title, label: 'Job Title',wrapper_html: { class: 'form-group' },input_html: { class: 'form-control' }  %>
 	<%=tinymce%>
 	
   <%= f.input :job_desc, as: :text, label: 'Job Description',wrapper_html: { class: 'form-group'  },input_html: { class: 'form-control job-desc tinymce' }  %>
 	
   <%= f.input :application_instructions, label: 'How should the user apply to this job ?',wrapper_html: { class: 'form-group' },input_html: { class: 'form-control appinstructions' }  %>
-  
-  <%= simple_fields_for @company do |fa| %>
-		<%=fa.input :name, label: 'Company Name',wrapper_html: { class: 'form-group' },input_html: { class: 'form-control' }%>
-		
-		<%=fa.input :url, label: 'Home page',wrapper_html: { class: 'form-group' },input_html: { class: 'form-control' }%>
-		
-		<%=fa.input :headquarters, label: 'Headquarters',wrapper_html: { class: 'form-group' },input_html: { class: 'form-control' }%>
-    
-    <%=fa.input :email, label: 'Email',wrapper_html: { class: 'form-group' },input_html: { class: 'form-control' }%>
- 	<% end %>
 
 <%= f.submit 'Preview posting', class: 'btn btn-primary btn-lg btn-block'  %>
 

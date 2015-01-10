@@ -1,7 +1,7 @@
-	      <% if @temp_job_post.errors.any? %>
+	      <% if @company.errors.any? %>
         <div id="error_explanation" class="alert alert-danger alert-dismissable">
           <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-          <h4>Oops! <%= pluralize(@temp_job_post.errors.count, "error") %> 
+          <h4>Oops! <%= pluralize(@company.errors.count, "error") %> 
              prohibited this posting from being saved:</h4>
 
           <ul>
@@ -9,14 +9,6 @@
             <li><%= msg %></li>
           <% end %>
           </ul>
-
-          <ul>
-          <% @temp_job_post.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
-          <% end %>
-          </ul>
-
-
         </div>
       <% end %>
       

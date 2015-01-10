@@ -2,6 +2,8 @@
 	<div class= "row">
 <%= simple_form_for @temp_job_post,
 :html => { :multipart => true } do |f| %>
+	<%= render 'temp_job_posts/errors' %>
+
 	<%= f.label "About the job", class: 'subsectionheader'%>
 	
   <%= f.input :job_title, label: 'Job Title',wrapper_html: { class: 'form-group' },input_html: { class: 'form-control' }  %>

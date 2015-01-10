@@ -23,6 +23,7 @@ class TempJobPostsController < ApplicationController
     if @temp_job_post.save && @company.save
       redirect_to jobpreview_path(@temp_job_post)
     else
+      render :new
     end
   end
   
@@ -38,6 +39,7 @@ class TempJobPostsController < ApplicationController
     if @temp_job_post.update_attributes(job_params) && @company.update_attributes(company_params)
       redirect_to jobpreview_path(@temp_job_post)
     else
+      render :edit
     end
     
   end

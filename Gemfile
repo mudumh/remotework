@@ -45,7 +45,7 @@ gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 # uploads
 gem "mini_magick"
 gem 'carrierwave'
-
+gem 'gibbon', git: 'git://github.com/amro/gibbon.git'
 gem 'fog'
 #fulltext searching based on pg db
 gem 'pg_search'

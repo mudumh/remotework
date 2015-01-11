@@ -11,11 +11,14 @@ class SubscribersController < ApplicationController
   
   def create
     @subscriber = Subscriber.new(params_subscriber)
-    @subscriber.save
-    SubscriberMailer.account_activation(@subscriber).deliver
-    #set a flash message here and re-render the job postings index page.
-    flash[:notice] = 'Please check your mail to confirm subscription'
-    redirect_to job_postings_path 
+    if @subscriber.valid?
+      @subscriber.subscribe
+      flash[:notice] = 'Please check your mail to confirm subscription'
+    else 
+      flash[:notice] = "Please enter a valid email"
+    end
+    redirect_to job_postings_path
+    
   end
 
   def show
